@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   
+
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title><?=$title?></title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body class="container bkg">
+    
+<template id="welcomeTemp">
+    <section class="jumbotron-container" id="home">
+        <div class="welcome-jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">Worlds Greatest Blog</h1>
+                <p class="lead">Enjoy this websites blog post, our lovely community and 
+                the endless oportunities of social media</p>
+                <br>
+                <div id="welcome"></div>
+            </div>
+
+            
+    </section>
+</template>
+<template id="greetingTemp">
+    <section class="jumbotron-container">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">User's Blog</h1>
+                <p class="lead">Thank you for using our website for your personal Journal, enter a title and some
+                    content to create your next post</p>
+            </div>
+            <hr class="my-4">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="title-grp">Set Title</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Default"
+                    aria-describedby="title-grp">
+            </div>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Content</span>
+                </div>
+                <textarea class="form-control" aria-label="With textarea"></textarea>
+            </div>
+            
+            <div class="btn-div">
+                <button type="submit" class="btn btn-lg btn-light">Submit</button>
+            </div>
+    </section>
+</template>
+
+  <template id="loginTemp">
+    <section id="login" class="form-container hidden">
+        <form id="loginform">
+            <div class="form-group input-group-lg">
+                <h2>Login</h2>
+                <label for="username">Username</label>
+                <input class="form-control" type="text" id="username" name="username" />
+                <label for="password">Password</label>
+                <input class="form-control" type="password" id="password" name="password" />
+            </div>
+            <div class="form-check">
+                <input class="btn btn-primary" id="submit-login" type="submit" value="SUBMIT" />
+                <p id="errorfield-username" class="error hidden">Wrong input in username</p>
+                <p id="errorfield-password" class="error hidden">Wrong input in password</p>
+            </div>
+        </form>
+    </section>
+</template>
+
+<template id="registerTemp">
+    <section id="register" class="form-container hidden">
+    <h2>Register</h2>
+<form id="registerform">
+    <div class="form-group input-group-lg">
+        <label for="username-reg">Username</label>
+        <input class="form-control" type="text" id="username-reg" name="username-reg" />
+        <label for="password-reg">Password</label>
+        <input class="form-control" type="password-reg" id="password-reg" name="password-reg" />
+    </div>
+    <div class="form-check">
+        <input class="btn btn-primary" id="submit-reg" type="submit-reg" value="SUBMIT" />
+        <p id="errorfield-username" class="error hidden">Wrong input in username</p>
+        <p id="errorfield-password" class="error hidden">Wrong input in password</p>
+    </div>
+</form>
+</section>
+</template>
+
+<template id="chooseTemp">
+<section class="choose-container">
+    <div id="home-btn" class="choose-btn">
+    Home
+    </div>
+        <div id="login-btn" class="choose-btn">
+            Login
+        </div>
+    <div id="register-btn" class="choose-btn">
+    Register
+    </div>
+</section>
+</template>
+
+<template id="cardTemp">
+  <section class="card-container">
+
+  
+  </section>
+  </template>
+  <main>
+
+  </main>
+    <script src="script.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+</body>
+
+</html>
+
