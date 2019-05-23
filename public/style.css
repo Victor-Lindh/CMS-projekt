@@ -1,0 +1,117 @@
+body{
+    /* overflow: hidden; */
+    transition: all ease 1s;
+   text-transform:   capitalize;
+   color: #483030;
+}
+
+.hidden {
+    display: none;
+  }
+  .error {
+    color: red;
+  }
+label{
+    font-size: 2rem;
+    
+    /* -webkit-text-fill-color: transparent; */
+
+}
+  .bkg{
+
+    
+     background-repeat: no-repeat;
+     background-size: 100%;
+     background-attachment: fixed;
+}
+    
+    .form-container{
+        margin: 0% auto;   
+        width: 25vw;
+        
+        background-color: rgba(245, 245, 220, 0.585);
+        padding: 2vw; 
+        border-radius: 1.5%;
+        
+    }
+    .jumbotron-container{
+        height: 100%;
+        margin: 0% auto;
+        
+        /* height: auto; */
+    }
+    
+    #submit-login{
+        background-color: beige; 
+        border: 0.5px dotted black; 
+      color: black; 
+    }
+    #submit-reg{
+        background-color: beige; 
+        border: 0.5px dotted black; 
+      color: black; 
+    }
+    .jumbotron{
+        /* position: fixed; */
+        left: 5vw;
+        top: 0;
+        background-color: rgba(245, 245, 220, 0.585);
+        width: 55vw;
+        
+    }
+    .welcome-jumbotron{
+        text-align: center;
+        top: 0;
+        background-color: rgba(245, 245, 220, 0.585);
+        width: 100%;
+        padding: 10px;
+    }
+    .input-group{
+        width: 30vw;
+        margin: 0% auto;
+    }
+    .btn-div{
+        margin: 0% auto;
+        text-align: center;
+        padding-top: 3%;
+    }
+    .btn-lg{
+        margin: 0% auto;
+        padding: 2% 10%;
+        background-color: white;
+        color: black;
+        border: none;
+    }
+
+    .choose-container{
+        margin: 0% auto;
+    text-align: center;
+    }
+    .choose-btn{
+        font-size: 2rem;
+        width: 10vw;
+        background-color: rgba(245, 245, 220, 0.585);
+        padding: 1%;
+        margin: 1% auto;
+        display: inline-block;
+
+
+  }
+.choose-container :hover {
+    font-size: 2.05rem;
+    padding-left: 2%;
+    cursor: pointer;
+}
+
+.card{
+    width: 75%;
+    display: inline-block;
+}
+.card-body{
+    text-align: center;
+}
+.card-container{
+    margin: 1% auto;
+    text-align: center;
+
+}
