@@ -8,9 +8,9 @@ return function ($app) {
   // Add a logout route
   
   $app->get('/api/logout', function ($request, $response, $args) {
-    session_start();
+    // session_start();
     session_destroy();
-    return $response->withJson(['success' => 'ok']);  
+    return $response->withJson(['logout' => 'ok']);
     
   });
   
@@ -20,25 +20,26 @@ return function ($app) {
   
   $app->post('/api/login', function ($request, $response, $args) {
     $data = $request->getParsedBody();
-    $_SESSION = $userData;
+    $userData = $_SESSION;
     
     if (isset($data['username']) && isset($data['password'])) {
       $user = new User($this->db);
       $userData = $user->getUserName($data['username']);
-      
       if ($userData) {
-        if ($data['password'] == $userData['password']) {
-          $_SESSION['loggedIn'] = true;
+        if(password_verify($data['password'], $userData['password'])){
+          $_SESSION['username'] = $userData['username'];
           $_SESSION['userId'] = $userData['userID'];
-          return $response->withJson($userData['userID']);   
+          $_SESSION['loggedIn'] = true;
+          
+          return $response->withJson("SUCCESS!");
         }
       }
-      var_dump($_SESSION['username']);
+
     }
 
     return $response->withStatus(401);
     
-    });
+    }); // Här slutar api-login
 
 
    

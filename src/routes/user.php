@@ -11,6 +11,11 @@ return function ($app) {
     return $response->withJson($user->getUserByID($userID));
   })->add($auth);
 
+  $app->get('/api/users', function ($request, $response, $args) {
+    $user = new User($this->db);
+    return $response->withJson($user->getAllUsers());
+  });
+
 
   $app->get('/users', function ($request, $response, $args) {
     $user = new User($this->db);
