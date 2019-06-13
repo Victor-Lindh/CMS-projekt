@@ -1,12 +1,17 @@
 body{
-    /* overflow: hidden; */
     transition: all ease 1s;
    text-transform:   capitalize;
-   color: #483030;
+   background:#c0c0aa  /* fallback for old browsers */
+   
+   
+   
 }
 
 .hidden {
     display: none;
+  }
+  .show{
+      display: block;
   }
   .error {
     color: red;
@@ -17,6 +22,10 @@ label{
     /* -webkit-text-fill-color: transparent; */
 
 }
+
+/* .post-edit{
+    display: none;
+} */
   .bkg{
 
     
@@ -28,12 +37,12 @@ label{
     .form-container{
         margin: 0% auto;   
         width: 25vw;
-        
         background-color: rgba(245, 245, 220, 0.585);
         padding: 2vw; 
         border-radius: 1.5%;
         
     }
+ 
     .jumbotron-container{
         height: 100%;
         margin: 0% auto;
@@ -55,20 +64,29 @@ label{
         /* position: fixed; */
         left: 5vw;
         top: 0;
-        background-color: rgba(245, 245, 220, 0.585);
-        width: 55vw;
-        
+        background: #200122;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #6f0000, #200122);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #6f0000, #200122); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        width: 100%;
+        color: whitesmoke;
     }
     .welcome-jumbotron{
         text-align: center;
         top: 0;
-        background-color: rgba(245, 245, 220, 0.585);
+        background: #200122;  /* fallback for old browsers */
+background: -webkit-linear-gradient( #6f0000, #200122);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient( #6f0000, #200122); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
         width: 100%;
         padding: 10px;
+        color: whitesmoke;
+        font-weight: bolder;
     }
     .input-group{
-        width: 30vw;
-        margin: 0% auto;
+        width: 40vw;
+        margin: 5% auto;
+        text-align: center;
     }
     .btn-div{
         margin: 0% auto;
@@ -82,36 +100,91 @@ label{
         color: black;
         border: none;
     }
-
+    
+    #entry-form{
+        margin-left: 15%;
+        text-align: center;
+    }
+    #entry-btn{
+        width: 35vw;
+        margin: 5px;
+    }
     .choose-container{
         margin: 0% auto;
-    text-align: center;
+        text-align: center;
     }
     .choose-btn{
         font-size: 2rem;
         width: 10vw;
-        background-color: rgba(245, 245, 220, 0.585);
+        color: whitesmoke;
+        background: #200122;  
         padding: 1%;
         margin: 1% auto;
         display: inline-block;
+    }
+    .choose-container :hover {
+        font-size: 2.05rem;
+        padding-left: 2%;
+        cursor: pointer;
+    }
+    
+    .card{
+        width: 75%;
+        display: inline-block;
+        margin: 5px;
+        background-color:#6fcbd07d;
+        color: whitesmoke;
+    }
+    .card-body{
+        text-align: center; 
+        transition: all 1s ease;
+        display: none;
+    }
+    .card-body-login{
+        text-align: center; 
+        transition: all 1s ease;
+        margin: 5px;
+    }
+    #logout-btn{
+        background-color: rgb(216, 38, 77);
+        color: whitesmoke;
+        outline: 1px solid black;
+        border: 1px solid whitesmoke;
+        border-radius: 0;
+       
+    }
+    .card-container{
+        transition: all 1s ease;
+        margin: 1% auto;
+        text-align: center;
+        background: #200122;  /* fallback for old browsers */
+background: -webkit-linear-gradient(#6f0000, #200122);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(#6f0000, #200122); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+        
+    }
+    #users{
+        color: whitesmoke;
+        background: #200122;  /* fallback for old browsers */
+background: -webkit-linear-gradient(#6f0000, #200122);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(#6f0000, #200122); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-  }
-.choose-container :hover {
-    font-size: 2.05rem;
-    padding-left: 2%;
-    cursor: pointer;
-}
-
-.card{
-    width: 75%;
-    display: inline-block;
-}
-.card-body{
-    text-align: center;
-}
-.card-container{
-    margin: 1% auto;
-    text-align: center;
-
-}
+    }
+    h4{
+        color: #6f0000;
+    }
+    .comment-list li{
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+        color:lightgray;
+    }
+    .comments{
+        overflow: hidden;
+        width: 200px;
+        resize: none;
+        border-radius: 3%;
+    }
+    ul{
+        list-style-type: none;
+        padding: 1px;
+    }

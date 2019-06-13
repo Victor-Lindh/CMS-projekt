@@ -3,7 +3,10 @@
   require __DIR__ . '/../vendor/autoload.php';
 
   // Start a session here
-  session_start();
+  if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
 
   // Get settings and instantiate the app
   $settings = require __DIR__ . '/../src/settings.php';
@@ -25,5 +28,15 @@
   
   $entry = require __DIR__ . '/../src/routes/entry.php';
   $entry($app);
+
+  $register = require __DIR__ . '/../src/routes/register.php';
+  $register($app);
+ 
+  $comments = require __DIR__ . '/../src/routes/comments.php';
+  $comments($app);
+ 
+  $likes = require __DIR__ . '/../src/routes/likes.php';
+  $likes($app);
+
   // Run app
   $app->run();
