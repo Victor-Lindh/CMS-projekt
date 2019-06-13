@@ -67,10 +67,42 @@ class Entry extends Mapper {
 
       $statement->execute([
        ':title' => $data['title'],
-        ':content' => $data['content'],
+       ':content' => $data['content'],
        ':createdBy' => $_SESSION['userId'],
-        ':createdAt' => date("Y-m-d H:i:s")
+       ':createdAt' => date("Y-m-d H:i:s")
       ]);
-     
-   }
- }
+      
+    }
+      public function getLatestPosts() {
+        $statement = $this->db->prepare("SELECT title,content,createdBy,createdAt,entryID, users.username FROM entries LEFT JOIN users ON users.userID = entries.createdBy ORDER BY createdAt DESC");
+        $statement->execute();
+        return $statement->fetchAll(PDO::FETCH_ASSOC);
+      }
+
+      public function getLatestUserPosts($userID) {
+        $statement = $this->db->prepare("SELECT * FROM entries WHERE createdBy = :userID ORDER BY createdAt DESC");
+        $statement->execute([":userID" => $userID]);
+        return $statement->fetchAll(PDO::FETCH_ASSOC);
+        
+      }
+      
+      public function removePost($entryID){
+        $statement = $this->db->prepare("DELETE FROM entries WHERE entryID = :id");
+        $statement->bindParam('id', $entryID);
+        $statement->execute();
+       return  [$entryID];
+       }
+
+
+       public function updatePost($title, $content, $editID) {
+        $statement = $this->db->prepare("UPDATE entries SET title = :title, content = :content WHERE entryID = :id");
+        $statement->bindParam('title', $title);
+        $statement->bindParam('content', $content);
+        $statement->bindParam('id', $editID);
+        $statement->execute();
+        return ['title' => $title, 'content' => $content];
+
+      }
+
+      
+    };
