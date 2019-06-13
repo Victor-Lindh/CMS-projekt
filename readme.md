@@ -1,5 +1,8 @@
 CMS-projekt, SPA.
 
+Gruppnamn: 
+The Bagged Cats
+
 Gruppmedlemmar:
 Xiaorui Wang, Victor Lindh, Burhan Budak, Martin Lindblad.
 
